@@ -8,7 +8,7 @@ hero:
   text: "一个导航页面"
   tagline: 小破站，别搞。
   image:
-    src: 'https://cdn.luogu.com.cn/upload/image_hosting/7b8zxy39.png'
+    src: 'https://cdn.luogu.com.cn/upload/image_hosting/7b8zxy39.png?x-oss-process=image/circle,r_120/format,png'
     alt: 苦力怕
   actions:
     - theme: brand
