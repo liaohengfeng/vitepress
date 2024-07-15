@@ -1,0 +1,49 @@
+name: 自动部署
+
+on:
+  push:
+    branches:
+      - main
+
+  release:
+    types:
+      - published
+
+jobs:
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: 检查分支
+      uses: actions/checkout@v4
+      with:
+        ref: main
+
+    - name: 安装 Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: "20.x"
+
+    - name: Setup Pages
+      uses: actions/configure-pages@v4
+
+    - name: Install dependencies
+      run: npm ci # 或 pnpm install / yarn install / bun install
+
+    - name: Build with VitePress
+      run: npm run docs:build # 或 pnpm docs:build / yarn docs:build / bun run docs:build
+
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+         path: docs/.vitepress/dist
+
+    - name: 部署 #此处master:master 指从本地的master分支提交到远程仓库的master分支(不是博客的分支写master即可)，若远程仓库没有对应分支则新建一个。如有其他需要，可以根据自己的需求更改。
+      run: |
+        cd ./docs/.vitepress/dist
+        git init
+        git config --global user.name 'liaohengfeng'
+        git config --global user.email '18982620158@163.com'
+        git add .
+        git commit -m "${{ github.event.head_commit.message }} $(date +"%Z %Y-%m-%d %A %H:%M:%S")"
+        git push --force --quiet "https://liaohengfeng:${{ secrets.TOKEN }}@github.com/liaohengfeng/doc.git" master:main  # GitHub配置
