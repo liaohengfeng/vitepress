@@ -34,6 +34,10 @@
    |  k  |   哲学   |
    |  l  |  抖机灵  |
 
+ 示例：
+- 返回类型为 `文学` 的 `文本` ：https://hitokoto.lhf.us.kg/?do=text&c=d
+- 返回一段 json：https://hitokoto.lhf.us.kg/?do=json&c=all
+
 
 ## 脑图
 
