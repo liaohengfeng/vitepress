@@ -2,7 +2,7 @@
 
 ## 画板
 
-网址：[draw](//whiteboard.lhf.us.kg/)
+网址：[draw](//draw.lhf.us.kg/)
 
 用法：参考 Windows 的画板吧。
 
