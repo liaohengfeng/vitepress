@@ -63,6 +63,20 @@
 
 支持接入自己的 Cookies ，**使用画图功能时必须接入Cookies**。
 
+## AI摘要
+
+网址：[qwen](//qwen-ai-auth0.lhf.us.kg/?q=)
+
+形式应如 `https://qwen-ai-auth0.lhf.us.kg/?q=[文章内容]`。
+
+## stable diffusion
+
+网址：[stable diffusion](//text2img.lhf.us.kg/?prompt=)
+
+形式应如 `https://text2img.lhf.us.kg/?prompt=[提示词]`。
+
+基于 cloudflare woker AI。
+
 ## markdown编辑器
 
 网址：[markdown](//ed.lhf.us.kg)
