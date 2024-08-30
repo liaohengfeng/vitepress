@@ -41,6 +41,8 @@ export default defineConfig({
                          { text: '计算器' , link: '/tool/#计算器',  },
                          { text: '短连接' , link: '/tool/#短连接',  },
                          { text: '必应ai' , link: '/tool/#必应ai',  },
+                         { text: 'AI摘要' , link: '/tool/#ai摘要',  },
+                         { text: 'stable diffusion' , link: '/tool/#stable-diffusion',  },
                          { text: 'markdown编辑器' , link: '/tool/#markdown编辑器',  },
                      ]
                 },
